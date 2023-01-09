@@ -5,6 +5,10 @@ ruby "2.7.2"
 
 gem "graphql"
 
+gem "devise"
+
+gem "friendly_id", "~> 5.4.0"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
@@ -58,7 +62,8 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
-  gem 'graphiql-rails'
+  gem "graphiql-rails"
+  gem "faker"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
