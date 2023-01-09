@@ -19,6 +19,13 @@ class GraphqlController < ApplicationController
     handle_error_in_development(e)
   end
 
+  def get_schema 
+    render json: DoAppointmentSchema.to_definition
+  rescue StandardError => e
+    raise e unless Rails.env.development?
+    handle_error_in_development(e)
+  end
+
   private
 
   # Handle variables in form data, JSON body, or a blank value
